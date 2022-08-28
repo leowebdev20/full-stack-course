@@ -11,11 +11,19 @@ const password = process.argv[2];
 const name = process.argv[3];
 const number = process.argv[4];
 
-const url = `mongodb+srv://admin:${password}@cluster0.7rfln.mongodb.net/peopleApp?retryWrites=true&w=majority`;
+const url = process.env.MONGODB_URI;
 
 const personSchema = new mongoose.Schema({
-  name: String,
-  number: String,
+  name: {
+    type: String,
+    minLength: 5,
+    required: true,
+  },
+  number: {
+    type: String,
+    minLength: 1,
+    required: false
+  },
 });
 
 const Person = mongoose.model("Person", personSchema);

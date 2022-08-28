@@ -24,7 +24,7 @@ app.use(
 
 const mongoose = require("mongoose");
 
-const url = `mongodb+srv://admin:admin@cluster0.7rfln.mongodb.net/peopleApp?retryWrites=true&w=majority`;
+const url = process.env.MONGODB_URI;
 
 mongoose.connect(url);
 
