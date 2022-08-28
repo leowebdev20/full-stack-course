@@ -4,8 +4,9 @@ const express = require("express");
 var morgan = require("morgan");
 const cors = require("cors");
 const Person = require("./models/person");
+const mongoose = require("mongoose");
+const app = express();
 
-var app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static("build"));
@@ -21,8 +22,6 @@ app.use(
     ":method :url :status :res[content-length] - :response-time ms :req[content] :res[content]"
   )
 );
-
-const mongoose = require("mongoose");
 
 const url = process.env.MONGODB_URI;
 
@@ -104,16 +103,21 @@ app.post("/api/persons", (request, response) => {
     });
   }
 
-  const person = {
+  console.log("body", body);
+ 
+  const person = new Person({
     name: body.name,
     number: body.number || "0",
     // id: generateId(),
-  };
+  });
+
+  console.log(person, "!!!");
 
   //   persons = persons.concat(person);
   // response.json(person);
 
   person.save().then((savedPerson) => {
+    console.log(savedPerson, "savedPerson");
     response.json(savedPerson);
   });
 });
