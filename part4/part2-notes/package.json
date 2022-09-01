@@ -1,14 +1,14 @@
 {
-  "name": "phonebook",
+  "name": "notes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^14.1.1",
     "axios": "^0.27.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -17,7 +17,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -p3003 --watch db.json"
+    "server": "json-server -p3001 --watch db.json",
+    "build:ui": "rm -rf build && cd ../part2-notes/ && npm run build && cp -r build ../notes-backend",
+    "deploy": "git push heroku main",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "heroku logs --tail"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +43,9 @@
   },
   "devDependencies": {
     "json-server": "^0.17.0"
-  }
+  },
+  "resolutions": {
+    "mini-css-extract-plugin": "2.4.5"
+  },
+  "proxy": "http://localhost:3001"
 }
