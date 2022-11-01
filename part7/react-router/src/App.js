@@ -49,7 +49,7 @@ const App = () => {
 
       <div>
         <i>Note app, Department of Computer Science 2022</i>
-      </div>
+      </div> 
     </Router>
   );
 };
