@@ -6,8 +6,18 @@ const helper = require('./test_helper')
 const app = require('../app')
 const api = supertest(app)
 
-const User = require('../models/user')
+const testingRouter = require('express').Router()
 const Note = require('../models/note')
+const User = require('../models/user')
+
+testingRouter.post('/reset', async (request, response) => {
+  await Note.deleteMany({})
+  await User.deleteMany({})
+
+  response.status(204).end()
+})
+
+module.exports = testingRouter
 
 describe('when there is initially some notes saved', () => {
   beforeEach(async () => {
