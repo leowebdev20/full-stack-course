@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
 
 const Home = () => (
   <div>
@@ -28,29 +29,31 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <div>
-        <Link style={padding} to="/">
-          home
-        </Link>
-        <Link style={padding} to="/notes">
-          notes
-        </Link>
-        <Link style={padding} to="/users">
-          users
-        </Link>
-      </div>
+    <div>
+      <Router>
+        <div>
+          <Link style={padding} to="/">
+            home
+          </Link>
+          <Link style={padding} to="/notes">
+            notes
+          </Link>
+          <Link style={padding} to="/users">
+            users
+          </Link>
+        </div>
 
-      <Routes>
-        <Route path="/notes" element={<Notes />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
+        <Routes>
+          <Route path="/notes" element={<Notes />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/" element={<Home />} />
+        </Routes>
 
-      <div>
-        <i>Note app, Department of Computer Science 2022</i>
-      </div> 
-    </Router>
+        <div>
+          <i>Note app, Department of Computer Science 2022</i>
+        </div>
+      </Router>
+    </div>
   );
 };
 
