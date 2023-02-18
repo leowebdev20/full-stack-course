@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Trn.Aebcr.Diagram.Bank" Collapsed="true">
+    <Position X="12.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQgAAAIoAAAAQAAAEAAAAICAAAAAgAAAAA=</HashCode>
+      <FileName>Aebcr\Bank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.BankDetail" Collapsed="true">
+    <Position X="12.5" Y="15.5" Width="1.5" />
+    <AssociationLine Name="BankId" Type="Trn.Aebcr.Diagram.Bank" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.438" Y="16.062" />
+        <Point X="13.438" Y="16.362" />
+        <Point X="12.2" Y="16.362" />
+        <Point X="12.2" Y="15.031" />
+        <Point X="12.5" Y="15.031" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\BankDetail.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BankId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.AtecoActivity" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\AtecoActvt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Municipality" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Aebcr\Mncpl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Nation" Collapsed="true">
+    <Position X="0.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\Natn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.UnitOfMeasure" Collapsed="true">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\UnitMeasr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Classification" Collapsed="true">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAACAgAAAAAAAAAAAAAgACAAAAAAA=</HashCode>
+      <FileName>Aebcr\Clsfc.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ParentId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.E4bUser" Collapsed="true">
+    <Position X="4.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAgAAgAg=</HashCode>
+      <FileName>Aebcr\E4bUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.BusinessPartner">
+    <Position X="2.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAACAAgAAAGAgAAQAAUAIAAABAAAgAAAACAA=</HashCode>
+      <FileName>Aebcr\BsnssPrtnr.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AtecoActivityId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Department" Collapsed="true">
+    <Position X="4.25" Y="16.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAgAAAAAAAgAAAQAAAAAAIIAAgAAAAAAAA=</HashCode>
+      <FileName>Aebcr\Dprtm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Location" Collapsed="true">
+    <Position X="2.75" Y="9.25" Width="1.5" />
+    <AssociationLine Name="ForeignNationId" Type="Trn.Aebcr.Diagram.Nation">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.173" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAgAAAAQAAIAAIIAAgQQAAAEAIAAACAAAgAiAAKQg=</HashCode>
+      <FileName>Aebcr\Location.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RegistersLocationId" />
+      <Property Name="RegulatoryCommunicationsLocationId" />
+      <Property Name="MunicipalityId" />
+      <Property Name="ForeignNationId" />
+      <Property Name="AtecoActivtyId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.BusinessPartnerLocation" Collapsed="true">
+    <Position X="3" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\BsPrLoctn.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BusinessPartnerId" />
+      <Property Name="LocationId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.E4BEntity" Collapsed="true">
+    <Position X="0.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\E4BEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Contact" Collapsed="true">
+    <Position X="2.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIEAIMCAAIAQABFAgAAECAAAAAgAAAAA=</HashCode>
+      <FileName>Aebcr\Cntct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MunicipalityID" />
+      <Property Name="ForeignNationId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.SectionPhrase" Collapsed="true">
+    <Position X="15.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQIAgAAAAAAAgAEEAgACAAAAACAAAgACAAAA=</HashCode>
+      <FileName>Aebcr\SectnPhras.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.PrintModel" Collapsed="true">
+    <Position X="13" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AggBAEAAAQQkACIAACAkAAgEAAAACBAAABAACAQAAQA=</HashCode>
+      <FileName>Aebcr\PrintModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Sorting1ClassificationId" />
+      <Property Name="Sorting2ClassificationId" />
+      <Property Name="Sorting3ClassificationId" />
+      <Property Name="ObjectPhraseId" />
+      <Property Name="Intro1SectionPhraseId" />
+      <Property Name="Intro2SectionPhraseId" />
+      <Property Name="Intro3SectionPhraseId" />
+      <Property Name="Footer1SectionPhraseId" />
+      <Property Name="Footer2SectionPhraseId" />
+      <Property Name="Footer3SectionPhraseId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.OfferTypology" Collapsed="true">
+    <Position X="11" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAgAAAAACAgAAAAAAACAAAAAEogAAAAgAA=</HashCode>
+      <FileName>Aebcr\OfferTplgy.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PrintModelId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.CheckingRule" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAggAAAAAggAQIAAAACAAAEAACgAAgAAAA=</HashCode>
+      <FileName>Aebcr\ChcknRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OfferTipologyId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Marketplace" Collapsed="true">
+    <Position X="6" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAiAgAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\Mrkpl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.MarketplaceCondition" Collapsed="true">
+    <Position X="6" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\MrkplCndtn.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MarketplaceId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.SalesForce">
+    <Position X="7.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAEAAAAACAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\SalesForce.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="E4bUserId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.SalesForceMarketplace">
+    <Position X="6.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAEEAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\SlFrMrkpl.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SalesForceId" />
+      <Property Name="MarketplaceId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.CommercialService" Collapsed="true">
+    <Position X="8.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAoAAAAACAgAAAAAAAAAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\CmrclServc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Rate" Collapsed="true">
+    <Position X="10" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAACAgAAAAAAAAAAAAAABgAABAAAA=</HashCode>
+      <FileName>Aebcr\Rate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.RateRange" Collapsed="true">
+    <Position X="10.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAQAAAAQAgCAAAACAIAAAAAAAAAAAAAgAIAAAAAAA=</HashCode>
+      <FileName>Aebcr\RateRange.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RateId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.PaymentMethod">
+    <Position X="8.25" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAoAAAEACAgBAAAAAIAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\PaymtMethd.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AlternativePaymentMethodId" />
+      <Property Name="VatPaymentMethodId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.EiPaymentMethod" Collapsed="true">
+    <Position X="9.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAQAAAAAgAAAAAAAgAAAAAABAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\EiPyMt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.CigCup">
+    <Position X="13.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAgAAAAAAAAAABCAAAAAAAAAAAAAAAAAgAAQAgAA=</HashCode>
+      <FileName>Aebcr\CigCup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.ValidityRange" Collapsed="true">
+    <Position X="15.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\Validity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.AccountingOrder">
+    <Position X="15.5" Y="17.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAQAggAAAAgAAAAACAgAAAAAAAAAAAAAAAgAAAAgCA=</HashCode>
+      <FileName>Aebcr\AccountingOrders.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CigCupId" />
+      <Property Name="ReferenceAccountingOrderId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.EIVatNature" Collapsed="true">
+    <Position X="8.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAQAAAgAAABAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\EIVatNature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.SuspendableValidityRange" Collapsed="true">
+    <Position X="17.25" Y="21.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\SuspendableValidityRange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Vat" Collapsed="true">
+    <Position X="6.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAggAAAAACAgAAAAAAAIAAAAAABgAAAEAAA=</HashCode>
+      <FileName>Aebcr\Vat.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EIVatNatureId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.PaymentDeadline" Collapsed="true">
+    <Position X="10.25" Y="20" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACgAAAAAAAAAAAAAAAhAAgAAEAAAAAAIEgAAAQ=</HashCode>
+      <FileName>Aebcr\PaymentDeadline.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PaymentMethodId" />
+      <Property Name="EIPaymentMethodId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.CommercialServiceApplicationRule" Collapsed="true">
+    <Position X="8" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAEQAAgAAAAAAAAUAAAAAAA=</HashCode>
+      <FileName>Aebcr\CommercialServiceApplicationRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CommercialServiceId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Price" Collapsed="true">
+    <Position X="10.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAIAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\Price.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.CommercialAgent">
+    <Position X="5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\CommercialAgent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BusinessPartnerId" />
+      <Property Name="ParentId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Manager" Collapsed="true">
+    <Position X="5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\Management.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Secretary" Collapsed="true">
+    <Position X="5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\Secretariat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.EntityRuleClause&lt;T&gt;" Collapsed="true">
+    <Position X="11.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAgA=</HashCode>
+      <FileName>Aebcr\Predicate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RuleId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.AssertionSignature">
+    <Position X="16.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQgAAAAAIAgAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\OfferAssertionSignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.EntityRule" Collapsed="true">
+    <Position X="10.5" Y="12" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\EntityRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.OfferComparableEntity">
+    <Position X="13" Y="12" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAgAAAAAAggAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Aebcr\OfferComparableEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.PrintModelExternalModel" Collapsed="true">
+    <Position X="13.25" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\PrintModelExternalModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PrintModelId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.SortingEntity">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Aebcr\SortingEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.ClassificableEntity">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAgAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\ClassificableEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.ClassificationEntity" Collapsed="true">
+    <Position X="3.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAABAAIAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Aebcr\ClassificationEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ClassificationId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.DepartmentBusinessPartnerOwner">
+    <Position X="4.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAgAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\DepartmentBusinessPartnerOwner.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BusinessPartnerOwner" />
+      <Property Name="DepartmentId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.BusinessPartnerOwner">
+    <Position X="2.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAAACAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\BusinessPartnerOwner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.DepartmentE4bUser">
+    <Position X="4.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQAAAACAAAAEgAABAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\DepartmentE4bUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="E4bUserId" />
+      <Property Name="DepartmentId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.JourneyDetermination" Collapsed="true">
+    <Position X="11.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAABAgAAAAACBgACAAAABAAAAQAAgiAAEAAQA=</HashCode>
+      <FileName>Aebcr\JourneyDetermination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.EiWithholdingTaxPensionFundType">
+    <Position X="12.75" Y="20.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAEAAAgAAAAAAAgAAAAAAAAAQAAAAAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\EiWithholdingTaxPensionFundType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.WithholdingTaxPensionFund">
+    <Position X="9.5" Y="20.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAIgBAAAACQgAAAAAAABAAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\WithholdingTaxPensionFund.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EiWithholdingTaxPensionFundTypeId" />
+      <Property Name="WithholdingTaxPaymentCausalId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.WithholdingTaxPaymentCausal">
+    <Position X="12.75" Y="22.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAABAgAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Aebcr\WithholdingTaxPaymentCausal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.OfferComparableEntityAssertionSignature">
+    <Position X="15.5" Y="10.25" Width="2.5" />
+    <AssociationLine Name="AssertionSignatureId" Type="Trn.Aebcr.Diagram.AssertionSignature" FixedToPoint="true">
+      <Path>
+        <Point X="17.125" Y="11.353" />
+        <Point X="17.125" Y="13.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAQAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\OfferComparableEntityOfferAssertionSignature.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OfferComparableEntityId" />
+      <Property Name="AssertionSignatureId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.BaseOffer">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACASAAAUggwAACAAgAIAAAAAAAEAAQgAAIBAAggA=</HashCode>
+      <FileName>Aebcr\BaseOffer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DepartmentId" />
+      <Property Name="BusinessPartnerOwnerId" />
+      <Property Name="OfferTypologyId" />
+      <Property Name="PaymentMethodId" />
+      <Property Name="BankDetailId" />
+      <Property Name="xInvoicingRuleId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.InvoicingRule">
+    <Position X="16.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAAAEAAICAAUABAIGAAAAAEAAAAAgAAAgAgAAAIAAA=</HashCode>
+      <FileName>Aebcr\InvoicingRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ActiveTimePeriodId" />
+      <Property Name="PassiveTimePeriodId" />
+      <Property Name="MaxWaitForTimePeriodId" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.TimePeriod" Collapsed="true">
+    <Position X="0.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABgAAAAAAAgAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\TimePeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.OfferTemplate">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\OfferTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.PriceList">
+    <Position X="14.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\PriceList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trn.Aebcr.Diagram.Offer">
+    <Position X="13.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAECAAAAIAAAAAIQQAAAAIAEAIAAQAAACAAAAA=</HashCode>
+      <FileName>Aebcr\Offer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OfferTemplateId" />
+      <Property Name="PriceListId" />
+      <Property Name="CommercialAgentId" />
+      <Property Name="SecretaryId" />
+      <Property Name="ManagerId" />
+      <Property Name="CustomerBusinessPartnerId" />
+      <Property Name="RecipientBusinessPartnerId" />
+      <Property Name="CustomerLocationId" />
+      <Property Name="RecipientLocationId" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Trn.Aebcr.Diagram.BusinessPartnerCategory" Collapsed="true">
+    <Position X="0.5" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAIAIAAAIAAACDAgAAAAAgiAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\bs_pr_catgr.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.LocationCategory" Collapsed="true">
+    <Position X="0.5" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAABAAAACAAAQAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Aebcr\LoctnCatgr.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.ContactRole" Collapsed="true">
+    <Position X="0.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUIABAAAAACAACACAAAAAAAEAIEAAAoAACICAJAGAQ=</HashCode>
+      <FileName>Aebcr\CntctRole.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.OfferStatus" Collapsed="true">
+    <Position X="18.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAIBAAoAAIAAACAAACAAAQAA=</HashCode>
+      <FileName>Aebcr\OfferStts.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.ComparisonOperator" Collapsed="true">
+    <Position X="18.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAABAAAIAAAAAAAAAAGIQAAAACAIAAAAAAAQA=</HashCode>
+      <FileName>Aebcr\CmprsOprtr.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.CommercialRole" Collapsed="true">
+    <Position X="18.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Aebcr\CmrclRole.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.RangeDetermination" Collapsed="true">
+    <Position X="18.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAIAgEAAAAEAABAAAgAAIAAQQAIIECAA=</HashCode>
+      <FileName>Aebcr\RangeDtrmt.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.PriceType" Collapsed="true">
+    <Position X="18.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAoIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\PriceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.RangeType" Collapsed="true">
+    <Position X="18.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Aebcr\RangeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.MaturityDayMode" Collapsed="true">
+    <Position X="18.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAABABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\MatrtDay.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.PaymentChannel" Collapsed="true">
+    <Position X="18.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAIAAAAAAAQAAAEABAAAAQAAAACAAAAAAAIYAA=</HashCode>
+      <FileName>Aebcr\PaymtChnnl.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.VatType" Collapsed="true">
+    <Position X="6.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAEAgAAAAACABAAAAAAAAACAAAAAABAA=</HashCode>
+      <FileName>Aebcr\VatType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.ArgumentType" Collapsed="true">
+    <Position X="18.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEBAAAAQAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Aebcr\ArgumentType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.DocumentSection" Collapsed="true">
+    <Position X="18.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQABAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Aebcr\DocumentSection.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.DocumentType" Collapsed="true">
+    <Position X="18.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAMBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Aebcr\DocumentType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.WithholdingTaxPensionFundType" Collapsed="true">
+    <Position X="18.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAIAAAAAAAAACAAAAAAADAAAAAAIAA=</HashCode>
+      <FileName>Aebcr\WithholdingTaxPensionFundType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.TimePeriodType" Collapsed="true">
+    <Position X="0.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAABAAAQAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Aebcr\TimePeriodType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Trn.Aebcr.Diagram.TemplatePriceListStatus" Collapsed="true">
+    <Position X="18.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Aebcr\TemplatePriceListStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
