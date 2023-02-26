@@ -1,0 +1,20 @@
+{
+    "plugins": ["react", "react-native"],
+    "settings": {
+      "react": {
+        "version": "detect",
+        "requireConfigFile": "false"
+      }
+    },
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "parser": "@babel/eslint-parser", 
+    "requireConfigFile": "false",
+    "env": {
+      "react-native/react-native": true
+    },
+    "rules": {
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "requireConfigFile": "false"
+    }
+  }
